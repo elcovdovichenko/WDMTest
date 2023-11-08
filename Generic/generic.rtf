@@ -1,0 +1,1016 @@
+{\rtf1\ansi \deff0\deflang1033
+
+{\fonttbl
+{\f0\froman Times New Roman;}
+{\f2\fswiss Arial;}
+{\f19\fmodern\fcharset0\fprq1 Courier New;}
+}
+
+{\colortbl;
+\red0\green0\blue0;
+\red0\green0\blue255;
+\red0\green255\blue255;
+\red0\green255\blue0;
+\red255\green0\blue255;
+\red255\green0\blue0;
+\red255\green255\blue0;
+\red255\green255\blue255;
+\red0\green0\blue127;
+\red0\green127\blue127;
+\red0\green127\blue0;
+\red127\green0\blue127;
+\red127\green0\blue0;
+\red127\green127\blue0;
+\red127\green127\blue127;
+\red192\green192\blue192;
+}
+
+
+{\stylesheet
+{\s243\li-1800\sl-210\tqr\tx6960 \b\f2\fs19\lang1033 header;}
+{\s251\sb160\sa40\sl-280\keepn \b\f2\lang1033 heading 4;}
+{\s252\sb160\sa40\sl-340\keepn \b\f2\fs30\lang1033 heading 3;}
+{\s253\li-1800\sb160\sa60\sl-380\keepn \b\f0\fs34\lang1033 heading 2;}
+{\s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 heading 1;}
+{\*\cs10 \additive Default Paragraph Font;}
+{\sa160\sl240 \fs21\lang1033 Normal;}
+{\s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 Ex;}
+{\s44\li-1770\ri30\sb50\sl-80\brdrt\brdrs\brdrw15\brdrcf2 \fs12\lang1033 header rule;}
+{\s45\li-1800\sa180\sl-440\keepn\tx0 \b\f2\fs40\up8\lang1033 Rh1;}
+{\s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Rmh;}
+{\s50\sl-240\keepn \f0\fs21\lang1033 Term1;}
+{\s53\li280\sl-240\keepn \f0\fs21\lang1033 Term2;}
+{\s54\li280\sa80\sl-240 \f0\fs21\lang1033 Def1;}
+{\s55\li560\sa80\sl-240 \f0\fs21\lang1033 Def2;}
+{\s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 Rule;}
+{\s93\sl240 \fs21\lang1033 
+Index Link;}
+{\s25\sa80\widctlpar\intbl \f4\fs21\lang1024 \sbasedon0\snext25 Table Text;}
+}
+
+\paperw12240\paperh15840\margl3330\margr1530\margt-2540\margb-2220\gutter420 
+\facingp\deftab280\widowctrl\ftnbj 
+
+\sectd \binfsxn1\binsxn1\linex0\headery1990\footery360\endnhere\titlepg 
+
+{\headerl \pard\plain \s243\li-1800\sl-210\tqr\tx6960 \b\f2\fs19\lang1033 
+{\field\flddirty{\*\fldinst PAGE}{\fldrslt 4}}{\expnd50  }Autoduck Output - 04/27/00\par 
+\pard\plain \s44\li-1770\ri30\sb50\sl-80\brdrt\brdrs\brdrw15\brdrcf2 \fs12\lang1033 \par }
+
+{\headerr \pard\plain \s243\li-1800\sl-210\tqr\tx6960 \b\f2\fs19\lang1033 
+\tab Autoduck Output - 04/27/00{\expnd50   }
+{\field\flddirty{\*\fldinst PAGE}{\fldrslt 3}}
+\par \pard\plain \s44\li-1770\ri30\sb50\sl-80\brdrt\brdrs\brdrw15\brdrcf2 \fs12\lang1033 
+\par }
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 AbortAllRequests\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI VOID GENERIC_EXPORT} {\b AbortAllRequests(}{\b PDEVQUEUE*} {\i q}{\b , ULONG} {\i nq}{\b , NTSTATUS} {\i status}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Begin rejecting new requests\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/DEVQUEUE.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i q}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Array of queue objects\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i nq}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Number of queues\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i status}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Status with which to fail new requests, for example:\par 
+
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 STATUS_DELETE_PENDING\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 Device is being deleted\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 STATUS_DEVICE_POWERED_OFF\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 Device is has been powered off\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 Undo the effect of this call by calling AllowRequests\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Added in version 1.3\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 AbortRequests\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI VOID GENERIC_EXPORT} {\b AbortRequests(}{\b PDEVQUEUE} {\i pdq}{\b , NTSTATUS} {\i status}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Begin rejecting new requests\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/DEVQUEUE.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdq}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of queue object\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i status}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Status with which to fail new requests, for example:\par 
+
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 STATUS_DELETE_PENDING\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 Device is being deleted\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 STATUS_DEVICE_POWERED_OFF\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 Device is has been powered off\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 Undo the effect of this call by calling AllowRequests\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 AllowAllRequests\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI VOID GENERIC_EXPORT} {\b AllowAllRequests(}{\b PDEVQUEUE*} {\i q}{\b , ULONG} {\i nq}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Begin accepting new requests\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/DEVQUEUE.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i q}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Array of queue objects\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i nq}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Number of queues\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 This function undoes the effect of a previous call to AbortRequests\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Added in version 1.3\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 AllowRequests\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI VOID GENERIC_EXPORT} {\b AllowRequests(}{\b PDEVQUEUE} {\i pdq}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Begin accepting new requests\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/DEVQUEUE.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdq}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of queue object\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 This function undoes the effect of a previous call to AbortRequests\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 AreRequestsBeingAborted\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI NTSTATUS GENERIC_EXPORT} {\b AreRequestsBeingAborted(}{\b PDEVQUEUE} {\i pdq}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Determine if new requests are currently being rejected\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/DEVQUEUE.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Return Value\par \pard\plain \sa160\sl240 \fs21\lang1033 STATUS_SUCCESS if requests aren't being aborted right now, some nonzero 
+status code otherwise.\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdq}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of queue object\par 
+
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 CancelRequest\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI VOID GENERIC_EXPORT} {\b CancelRequest(}{\b PDEVQUEUE} {\i pdq}{\b , PIRP} {\i Irp}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Handle cancellation of an IRP\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/DEVQUEUE.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdq}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of queue object\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i Irp}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 IRP that's being cancelled\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 Call this function from a standard cancel routine while still owning 
+the global cancel spin lock.\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 CheckAnyBusyAndStall\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI BOOLEAN GENERIC_EXPORT} {\b CheckAnyBusyAndStall(}{\b PDEVQUEUE*} {\i q}{\b , ULONG} {\i nq}{\b , PDEVICE_OBJECT} {\i fdo}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Stall all queues if none is currently busy\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/DEVQUEUE.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Return Value\par \pard\plain \sa160\sl240 \fs21\lang1033 TRUE if at least one queue is currently busy. FALSE if none are currently busy, in 
+which case this function will also stall the queues to prevent the device from 
+becoming busy\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i q}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Array of queue objects\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i nq}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Number of queues\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i fdo}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Device object which owns the queues\par 
+
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 CheckBusyAndStall\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI BOOLEAN GENERIC_EXPORT} {\b CheckBusyAndStall(}{\b PDEVQUEUE} {\i pdq}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Stall queue if not currently busy\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/DEVQUEUE.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Return Value\par \pard\plain \sa160\sl240 \fs21\lang1033 TRUE if device currently busy. FALSE if device not currently busy, in 
+which case this function will also stall the queue to prevent the device from 
+becoming busy\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdq}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of queue object\par 
+
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 CleanupAllRequests\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI VOID GENERIC_EXPORT} {\b CleanupAllRequests(}{\b PDEVQUEUE*} {\i q}{\b , ULONG} {\i nq}{\b , PFILE_OBJECT} {\i fop}{\b , NTSTATUS} {\i status}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Complete requests for a given file object\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/DEVQUEUE.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i q}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Array of queue objects\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i nq}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Number of queues\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i fop}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 File object for which requests are to be completed. NULL to complete all 
+requests on the queues\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i status}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Completion status (usually STATUS_CANCELLED)\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 Added in version 1.3\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 CleanupGenericExtension\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI VOID GENERIC_EXPORT} {\b CleanupGenericExtension(void}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Cleanup GENERIC.SYS device extension\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/DRIVERENTRY.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 A minidriver should call this function after a successful call to 
+InitializeGenericExtension if some error prevents minidriver's AddDevice 
+function from completing successfully. It's an error to call this function 
+at any other time.\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Added in version 1.3.\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 CleanupRequests\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI VOID GENERIC_EXPORT} {\b CleanupRequests(}{\b PDEVQUEUE} {\i pdq}{\b , PFILE_OBJECT} {\i fop}{\b , NTSTATUS} {\i status}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Complete requests for a given file object\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/DEVQUEUE.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdq}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of queue object\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i fop}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 File object for which requests are to be completed. NULL to complete all 
+requests on the queue\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i status}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Completion status (usually STATUS_CANCELLED)\par 
+
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 GenericCacheControlRequest\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI NTSTATUS GENERIC_EXPORT} {\b GenericCacheControlRequest(}{\b PGENERIC_EXTENSION} {\i pdx}{\b , PIRP} {\i Irp}{\b , PIRP*} {\i pIrp}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Cache an asynchronous I/O control request\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/CONTROL.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Return Value\par \pard\plain \sa160\sl240 \fs21\lang1033 Status code:\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 STATUS_PENDING\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 (Normal return value) IRP has been cached for asynchronous completion\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 STATUS_INVALID_DEVICE_REQUEST\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 GENERIC_PENDING_IOCTLS flag wasn't set in GENERIC_INIT_STRUCT passed to InitializeGenericExtension\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 STATUS_INVALID_PARAMETER\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 IRP doesn't have a free I/O stack location\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 (other)\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 An error of some kind has occurred\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdx}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Generic.sys device extension\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i Irp}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 IRP to cache\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pIrp}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Where to save pointer to cached IRP. The calling driver should not ever access this 
+location directly. GENERIC.SYS only accesses it while owning a spin lock that ensures 
+thread and multiprocessor safety.\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 Use this function to cache a pointer to an asynchronous I/O Control request. GENERIC.SYS will 
+take care of completing the IRP if it's cancelled or if a PnP or Power event occurs.\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 \cf6 Developer Notes\par \pard\plain \sa160\sl240 \fs21\lang1033 \cf6 This routine advances the I/O stack pointer by one location in order to install a 
+completion routine. GenericUncacheControlRequest does *not* restore the stack pointer. If you 
+plan to pass an uncached IRP down to a lower-level driver, be sure you increase the StackSize 
+in your device object by one during your own AddDevice so the IRP will have enough stack.\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 GenericCleanupAllRequests\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI VOID GENERIC_EXPORT} {\b GenericCleanupAllRequests(}{\b PGENERIC_EXTENSION} {\i pdx}{\b , PFILE_OBJECT} {\i fop}{\b , NTSTATUS} {\i status}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Cleanup all requests on all queues\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/CONTROL.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdx}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Generic.sys device extension\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i fop}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 File object, or NULL to indicate all requests for all file objects\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i status}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Status code to use in completing requests\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 This function cleans up IRPs for all DEVQUEUEs that were registered 
+in the initial call to InitializeGenericExtension and all cached IOCTL requests.\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Added in version 1.3\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 GenericCleanupControlRequests\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI VOID GENERIC_EXPORT} {\b GenericCleanupControlRequests(}{\b PGENERIC_EXTENSION} {\i pdx}{\b , NTSTATUS} {\i status}{\b , PFILE_OBJECT} {\i fop}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Cleanup cached I/O control requests\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/CONTROL.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdx}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Generic.sys device extension\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i status}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Status code to use in completing requests\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i fop}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 File object for which requests are to be completed. NULL if all cached 
+requests for the calling driver are to be completed.\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 The main purpose of this routine is to help handle an IRP_MJ_CLEANUP when 
+the file handle may have been used to submit pending control requests.\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 GenericDeregisterInterface\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI NTSTATUS GENERIC_EXPORT} {\b GenericDeregisterInterface(}{\b PGENERIC_EXTENSION} {\i pdx}{\b , const GUID*} {\i guid}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Deregister a device interface\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/PLUGPLAY.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Return Value\par \pard\plain \sa160\sl240 \fs21\lang1033 One of the following standard status codes:\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 STATUS_SUCCESS\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 Operation was performed\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 STATUS_INVALID_PARAMETER\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 No interface GUID by that name registered\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdx}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of generic device extension\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i guid}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of GUID for which an interface was previously registered\par 
+
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 GenericDispatchPnp\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI NTSTATUS GENERIC_EXPORT} {\b GenericDispatchPnp(}{\b PGENERIC_EXTENSION} {\i pdx}{\b , PIRP} {\i Irp}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Handle IRP_MJ_PNP\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/PLUGPLAY.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Return Value\par \pard\plain \sa160\sl240 \fs21\lang1033 Standard completion code\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdx}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of generic device extension\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i Irp}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Plug and Play request\par 
+
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 GenericDispatchPower\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI NTSTATUS GENERIC_EXPORT} {\b GenericDispatchPower(}{\b PGENERIC_EXTENSION} {\i pdx}{\b , PIRP} {\i Irp}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Handle IRP_MJ_POWER request\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/POWER.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Return Value\par \pard\plain \sa160\sl240 \fs21\lang1033 Standard status code\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdx}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of generic device extension\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i Irp}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Power request\par 
+
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 GenericEnableInterface\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI NTSTATUS GENERIC_EXPORT} {\b GenericEnableInterface(}{\b PGENERIC_EXTENSION} {\i pdx}{\b , const GUID*} {\i guid}{\b , BOOLEAN} {\i enable}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Enable or disable a device interface\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/PLUGPLAY.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Return Value\par \pard\plain \sa160\sl240 \fs21\lang1033 One of the following standard status codes:\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 STATUS_SUCCESS\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 Operation was performed\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 STATUS_INVALID_PARAMETER\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 No interface GUID by that name registered\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdx}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of generic device extension\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i guid}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of GUID for which an interface was previously registered 
+by calling GenericRegisterInterface\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i enable}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 TRUE if interface should be enabled, FALSE if should be disabled\par 
+
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 GenericGetVersion\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI ULONG GENERIC_EXPORT} {\b GenericGetVersion(void}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Get revision level of this edition of GENERIC.SYS\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/DRIVERENTRY.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Return Value\par \pard\plain \sa160\sl240 \fs21\lang1033 32-bit packed revision level, as follows:\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 High-order 16 bits\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 Major version number\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 Low-order 16 bits\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 Minor version number\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 Added in version 1.3 (why didn't I think of this originally??)\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 GenericHandlePowerIoctl\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI NTSTATUS GENERIC_EXPORT} {\b GenericHandlePowerIoctl(}{\b PGENERIC_EXTENSION} {\i pdx}{\b , PIRP} {\i Irp}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Handle power management I/O control request\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/POWER.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Return Value\par \pard\plain \sa160\sl240 \fs21\lang1033 Standard status code. STATUS_INVALID_DEVICE_REQUEST means that this IRP 
+doesn't contain a generic power management IRP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdx}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of generic device extension\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i Irp}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 IRP\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 Caller should already have acquired the remove lock it uses. On return, 
+caller should complete the IRP no matter what status we return.\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 GenericIdleDevice\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI NTSTATUS GENERIC_EXPORT} {\b GenericIdleDevice(}{\b PGENERIC_EXTENSION} {\i pdx}{\b , DEVICE_POWER_STATE} {\i state}{\b , BOOLEAN wait \tab \{} {\i if}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Power device down\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/POWER.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Return Value\par \pard\plain \sa160\sl240 \fs21\lang1033 Standard status code\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdx}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of generic device extension\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i state}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Device power state to set\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i if}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 (Optional) TRUE if want to wait for operation to finish, FALSE otherwise. The default is FALSE.\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 Use this function to force the device into a low power state in response to 
+an end-user request to idle the device immediately\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 GenericMarkDeviceBusy\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI VOID GENERIC_EXPORT} {\b GenericMarkDeviceBusy(}{\b PGENERIC_EXTENSION} {\i pdx}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Indicate device is not idle\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/POWER.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdx}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of generic device extension\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 Call this function to perform a PoSetDeviceBusy in order to forestall an idle power-down\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 GenericRegisterForIdleDetection\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI VOID} {\b GenericRegisterForIdleDetection(}{\b PGENERIC_EXTENSION} {\i pdx}{\b , ULONG} {\i ConservationTimeout}{\b , ULONG} {\i PerformanceTimeout}{\b , DEVICE_POWER_STATE} {\i state}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Register device for idle detection\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/POWER.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdx}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of generic device extension\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i ConservationTimeout}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Timeout (in seconds) to apply when conserving power\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i PerformanceTimeout}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Timeout (in seconds) to apply when maximizing performance\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i state}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Device power state to enter when timeout expires with no call to GenericMarkDeviceBusy\par 
+
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 GenericRegisterInterface\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI NTSTATUS GENERIC_EXPORT} {\b GenericRegisterInterface(}{\b PGENERIC_EXTENSION} {\i pdx}{\b , const GUID*} {\i guid}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Register a device interface\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/PLUGPLAY.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Return Value\par \pard\plain \sa160\sl240 \fs21\lang1033 Standard status code, which may be one of these, among others:\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 STATUS_SUCCESS\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 Operation was performed\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 STATUS_INVALID_PARAMETER\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 An interface for this GUID has already been registered for this device.\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdx}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of generic device extension\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i guid}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of interface GUID\par 
+
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 GenericSaveRestoreComplete\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI VOID GENERIC_EXPORT} {\b GenericSaveRestoreComplete(}{\b PVOID} {\i context}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Completion routine for device context save/restore operations\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/POWER.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i context}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Context parameter supplied in GENERIC's call to your SaveDeviceContext 
+or RestoreDeviceContext function.\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 Call this function from the completion routine for the operations you 
+initiate in your SaveDeviceContext or RestoreDeviceContext routine.\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 GenericSetDeviceState\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI VOID GENERIC_EXPORT} {\b GenericSetDeviceState(}{\b PGENERIC_EXTENSION} {\i pdx}{\b , PNP_DEVICE_STATE} {\i pnpstate}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Report change in device status\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/PLUGPLAY.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdx}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of generic device extension\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pnpstate}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 New PnP state flags (see doc for PNP_DEVICE_STATE)\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 The client driver must synchronize calls to this routine to prevent 
+reentrance. The state that gets reported in the eventual IRP_MN_QUERY_PNP_DEVICE_STATE 
+includes just those flag bits that have changed since the last call to this routine. 
+This fact allows you to set PNP_DEVICE_NOT_DISABLEABLE one time and clear it another.\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 GenericUncacheControlRequest\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI PIRP GENERIC_EXPORT} {\b GenericUncacheControlRequest(}{\b PGENERIC_EXTENSION} {\i pdx}{\b , PIRP*} {\i pIrp}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Remove asynchronous I/O control request from the cache\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/CONTROL.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Return Value\par \pard\plain \sa160\sl240 \fs21\lang1033 Pointer to previously cached IRP, or NULL if none was cached\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdx}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Generic.sys device extension\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pIrp}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Pointer cell where IRP was cached by GenericCacheControlRequest\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 The main purpose of this routine is remove the IRP from the cache in preparation for completing it.\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 GenericWakeupControl\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI NTSTATUS GENERIC_EXPORT} {\b GenericWakeupControl(}{\b PGENERIC_EXTENSION} {\i pdx}{\b , enum WAKEFUNCTION} {\i wf}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Control device wakeup functionality\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/POWER.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Return Value\par \pard\plain \sa160\sl240 \fs21\lang1033 Standard status code, which may include the following (among others):\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 STATUS_SUCCESS\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 Requested change to wakeup enable state was made\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 STATUS_INVALID_DEVICE_REQUEST\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 Device doesn't support system wakeup, or invalid "wf" code\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdx}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of generic device extension\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i wf}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Code indicating action to take:\par 
+
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 EnableWakeup\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 Enable system wakeup functionality\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 DisableWakeup\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 Disable system wakeup functionality\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 ManageWaitWake\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 Request or cancel WAIT_WAKE IRP, as appropriate to enable state\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 CancelWaitWake\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 Unconditionally cancel WAIT_WAKE IRP if one is pending\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 GenericWakeupFromIdle\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI NTSTATUS GENERIC_EXPORT} {\b GenericWakeupFromIdle(}{\b PGENERIC_EXTENSION} {\i pdx}{\b , BOOLEAN} {\i wait}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Force device wakeup from idle state\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/POWER.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Return Value\par \pard\plain \sa160\sl240 \fs21\lang1033 Standard status code\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdx}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of generic device extension\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i wait}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 TRUE if want to wait for power-up to finish, FALSE otherwise\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 Call this function prior to StartPacket if the device might have been powered-down 
+due to idleness. If the device hasn't been powered down, this function returns immediately. 
+Otherwise, it sends a device SET_POWER request.\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 GetCurrentIrp\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI PIRP GENERIC_EXPORT} {\b GetCurrentIrp(}{\b PDEVQUEUE} {\i pdq}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Determine the current IRP for a queue\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/DEVQUEUE.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Return Value\par \pard\plain \sa160\sl240 \fs21\lang1033 The IRP most recently passed to the StartIo routine, or NULL if the 
+device is not busy.\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdq}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of queue object\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 This function serves the same purpose as dereferencing a device object's 
+CurrentIrp pointer in the "standard model"\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 GetSizeofGenericExtension\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI ULONG GENERIC_EXPORT} {\b GetSizeofGenericExtension(void}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Determine the size of the GENERIC.SYS device extension\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/DRIVERENTRY.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Return Value\par \pard\plain \sa160\sl240 \fs21\lang1033 Number of bytes needed by GENERIC.SYS in your device extension.\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 Call this function before creating your device object.\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Example\par \pard\plain \sa160\sl240 \fs21\lang1033 The following example illustrates how to specify the device extension size when you call IoCreateDevice\par 
+\pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 ULONG dxsize = (sizeof(DEVICE_EXTENSION) + 7) & ~7;\par 
+
+ULONG xsize = dxsize + GetSizeofGenericExtension();\par 
+
+PDEVICE_OBJECT fdo;\par 
+
+NTSTATUS status = IoCreateDevice(DriverObject, xsize, ..., &fdo);\par 
+
+PDEVICE_EXTENSION pdx = (PDEVICE_EXTENSION) fdo->DeviceObject;\par 
+
+PGENERIC_EXTENSION pgx = (PGENERIC_EXTENSION) ((PUCHAR) pdx + dxsize);\par 
+\pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 \par 
+
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 InitializeGenericExtension\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI NTSTATUS GENERIC_EXPORT} {\b InitializeGenericExtension(}{\b PGENERIC_EXTENSION} {\i pdx}{\b , PGENERIC_INIT_STRUCT} {\i isp}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Initialize GENERIC.SYS for a new device object\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/DRIVERENTRY.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Return Value\par \pard\plain \sa160\sl240 \fs21\lang1033 Standard status code, such as:\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 STATUS_INVALID_PARAMETER\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 Invalid parameter in initialization structure\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 STATUS_SUCCESS\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 Normal result\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdx}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of queue object\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i isp}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Structure containing initialization parameters\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 Call this function from your AddDevice function to register to use GENERIC.SYS 
+for handling standard WDM driver functions\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Example\par \pard\plain \sa160\sl240 \fs21\lang1033 The following example illustrates how to initialize your driver to use GENERIC.SYS:\par 
+\pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 NTSTATUS AddDevice(...)\par 
+
+  \{\par 
+
+  ULONG dxsize = (sizeof(DEVICE_EXTENSION) + 7) & ~7;\par 
+
+  ULONG xsize = dxsize + GetSizeofGenericExtension();\par 
+
+  PDEVICE_OBJECT fdo;\par 
+
+  NTSTATUS status = IoCreateDevice(DriverObject, xsize, ..., &fdo);\par 
+
+  PDEVICE_EXTENSION pdx = (PDEVICE_EXTENSION) fdo->DeviceObject;\par 
+
+  PGENERIC_EXTENSION pgx = (PGENERIC_EXTENSION) ((PUCHAR) pdx + dxsize);\par 
+
+  GENERIC_INIT_STRUCT gis = \{sizeof(GENERIC_INIT_STRUCT)\};\par 
+
+  [initialize fields of "gis" structure]\par 
+
+  status = InitializeGenericExtension(pgx, &gis);\par 
+
+  \}\par 
+\pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 \par 
+
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 InitializeQueue\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI VOID GENERIC_EXPORT} {\b InitializeQueue(}{\b PDEVQUEUE} {\i pdq}{\b , PDRIVER_STARTIO} {\i StartIo}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Initialize a device queue\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/DEVQUEUE.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdq}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of queue object\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i StartIo}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Routine to call to start a request\par 
+
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 IsWin98\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI BOOLEAN GENERIC_EXPORT} {\b IsWin98(void}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Determine if we're running under Windows 98 or Windows 2000\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/DRIVERENTRY.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Return Value\par \pard\plain \sa160\sl240 \fs21\lang1033 TRUE if running under Windows 98, FALSE if under Windows 2000\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 This function calls IoIsWdmVersionAvailable to see if the OS 
+supports WDM version 1.10. Win98 and Win98 2d ed support 1.00, whereas 
+Win2K supports 1.10.\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 OkayToRemove\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b BOOLEAN} {\b OkayToRemove(}{\b PDEVICE_OBJECT} {\i DeviceObject}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Determine if it's okay to remove the device right now\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/GENERIC.H\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Return Value\par \pard\plain \sa160\sl240 \fs21\lang1033 TRUE if the device can be remove immediately, FALSE otherwise.\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i DeviceObject}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of the device object.\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 GENERIC calls this function during the processing of IRP_MN_QUERY_REMOVE_DEVICE to determine if there's any reason 
+why the device could not immediately be removed.\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 The name of this function is a placeholder for a function you define in your driver. You 
+initialize the OkayToRemove field in the GENERIC_INIT_STRUCT to point to your function 
+before you call InitializeGenericExtension.\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 OkayToStop\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b BOOLEAN} {\b OkayToStop(}{\b PDEVICE_OBJECT} {\i DeviceObject}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Determine if it's okay to stop the device right now\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/GENERIC.H\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Return Value\par \pard\plain \sa160\sl240 \fs21\lang1033 TRUE if the device can be stopped immediately, FALSE otherwise.\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i DeviceObject}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of the device object.\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 GENERIC calls this function during the processing of IRP_MN_QUERY_STOP_DEVICE to determine if there's any reason 
+why the device could not immediately be stopped. If your device can't be stopped because it's busy 
+with a particular type of IRP, for example, you can return FALSE.\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 The name of this function is a placeholder for a function you define in your driver. You 
+initialize the OkayToStop field in the GENERIC_INIT_STRUCT to point to your function 
+before you call InitializeGenericExtension..\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 QueryPowerChange\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b BOOLEAN} {\b QueryPowerChange(}{\b PDEVICE_OBJECT} {\i DeviceObject}{\b , DEVICE_POWER_STATE} {\i oldstate}{\b , DEVICE_POWER_STATE} {\i newstate}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Determine if a pending power change will be okay\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/GENERIC.H\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Return Value\par \pard\plain \sa160\sl240 \fs21\lang1033 TRUE if the proposed power change is permissible, FALSE if not.\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i DeviceObject}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of the device object\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i oldstate}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 The current power state for the device\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i newstate}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 The proposed new power state for the device\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 GENERIC calls this routine as part of handling an IRP_MN_QUERY_POWER involving a 
+proposed change in the device power state. You should provide the answer without blocking 
+the current thread. 
+Your function must be in nonpaged memory unless you know that the underlying IRP can never 
+be sent at DISPATCH_LEVEL.\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 The name of this function is a placeholder for a function you define in your driver. You 
+initialize the QueryPower field in the GENERIC_INIT_STRUCT to point to your function 
+before you call InitializeGenericExtension.\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 RemoveDevice\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b VOID} {\b RemoveDevice(}{\b PDEVICE_OBJECT} {\i DeviceObject}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Destroy device object in response to IRP_MN_REMOVE_DEVICE\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/GENERIC.H\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i DeviceObject}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of the device object\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 In general, the operations of RemoveDevice should be the opposite of the operations performed in AddDevice.\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 The name of this function is a placeholder for a function you define in your driver. You 
+initialize the RemoveDevice field in the GENERIC_INIT_STRUCT to point to your function 
+before you call InitializeGenericExtension..\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 RestartAllRequests\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI VOID GENERIC_EXPORT} {\b RestartAllRequests(}{\b PDEVQUEUE*} {\i q}{\b , ULONG} {\i nq}{\b , PDEVICE_OBJECT} {\i fdo}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Unstall one or more queues\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/DEVQUEUE.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i q}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Array of queue objects\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i nq}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Number of queues\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i fdo}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of associated device object\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 This function undoes the effect of a previous call to StallRequests or 
+CheckBusyAndStall\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Added in version 1.3\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 RestartRequests\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI VOID GENERIC_EXPORT} {\b RestartRequests(}{\b PDEVQUEUE} {\i pdq}{\b , PDEVICE_OBJECT} {\i fdo}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Unstall a queue\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/DEVQUEUE.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdq}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of queue object\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i fdo}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of associated device object\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 This function undoes the effect of a previous call to StallRequests or 
+CheckBusyAndStall\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 RestoreDeviceContext\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b VOID} {\b RestoreDeviceContext(}{\b PDEVICE_OBJECT} {\i DeviceObject}{\b , DEVICE_POWER_STATE} {\i oldstate}{\b , DEVICE_POWER_STATE} {\i newstate}{\b , PVOID} {\i context}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Restore device context following power up\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/GENERIC.H\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i DeviceObject}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of the device object\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i oldstate}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Old device power state\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i newstate}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 New device power state\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i context}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Context parameter to use in eventual call to GenericSaveRestoreComplete\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 GENERIC calls this function to afford you an opportunity to restore any device context 
+information that should be restored after power is restored to your device. 
+You should initiate any required I/O operations without waiting for them to complete. 
+When all operations finish, call GenericSaveRestoreComplete. 
+Your function must be in nonpaged memory unless you know that the underlying IRP can never 
+be sent at DISPATCH_LEVEL.\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 The name of this function is a placeholder for a function you define in your driver. You 
+initialize the SaveDeviceContext field in the GENERIC_INIT_STRUCT to point to your function 
+before you call InitializeGenericExtension.\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 SaveDeviceContext\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b VOID} {\b SaveDeviceContext(}{\b PDEVICE_OBJECT} {\i DeviceObject}{\b , DEVICE_POWER_STATE} {\i oldstate}{\b , DEVICE_POWER_STATE} {\i newstate}{\b , PVOID} {\i context}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Save device context in preparation for powering down\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/GENERIC.H\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i DeviceObject}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of the device object\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i oldstate}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Old device power state\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i newstate}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 New device power state\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i context}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Context parameter to use in eventual call to GenericSaveRestoreComplete\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 GENERIC calls this function to afford you an opportunity to save any device context 
+information that will be lost when the device enters the specified new power state. 
+You should initiate any required I/O operations without waiting for them to complete. 
+When all operations finish, call GenericSaveRestoreComplete. 
+Your function must be in nonpaged memory unless you know that the underlying IRP can never 
+be sent at DISPATCH_LEVEL.\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 The name of this function is a placeholder for a function you define in your driver. You 
+initialize the SaveDeviceContext field in the GENERIC_INIT_STRUCT to point to your function 
+before you call InitializeGenericExtension.\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 StallAllRequests\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI VOID GENERIC_EXPORT} {\b StallAllRequests(}{\b PDEVQUEUE*} {\i q}{\b , ULONG} {\i nq}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Stall one or more queues\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/DEVQUEUE.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i q}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Array of queue objects\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i nq}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Number of queues\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 This function prevents requests from being sent to the StartIo routine.\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Added in version 1.3\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 StallAllRequestsAndNotify\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI NTSTATUS GENERIC_EXPORT} {\b StallAllRequestsAndNotify(}{\b PDEVQUEUE*} {\i q}{\b , ULONG} {\i nq}{\b , PQNOTIFYFUNC} {\i notify}{\b , PVOID} {\i context}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Stall queues and provide notification when current IRP completes\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/DEVQUEUE.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Return Value\par \pard\plain \sa160\sl240 \fs21\lang1033 Standard status code, as follows:\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 STATUS_SUCCESS\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 All queues are stalled and device was idle, so callback function won't be called.\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 STATUS_PENDING\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 All queues are stalled but device isn't idle yet.\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 STATUS_INVALID_DEVICE_REQUEST\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 A StallRequestsAndNotify is already pending for one of the queues\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i q}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Array of queue objects\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i nq}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Number of queues\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i notify}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of notification function\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i context}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Context value to be used as the only argument to the notify function\par 
+
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 StallRequests\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI VOID GENERIC_EXPORT} {\b StallRequests(}{\b PDEVQUEUE} {\i pdq}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Stall a queue\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/DEVQUEUE.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdq}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of queue object\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 This function prevents requests from being sent to the StartIo routine.\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 StallRequestsAndNotify\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI NTSTATUS GENERIC_EXPORT} {\b StallRequestsAndNotify(}{\b PDEVQUEUE} {\i pdq}{\b , PQNOTIFYFUNC} {\i notify}{\b , PVOID} {\i context}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Stall queue and provide notification when current IRP completes\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/DEVQUEUE.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Return Value\par \pard\plain \sa160\sl240 \fs21\lang1033 Standard status code, as follows:\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 STATUS_SUCCESS\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 Queue is stalled and device was idle, so callback function won't be called.\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 STATUS_PENDING\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 Queue is stalled but device isn't idle yet.\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 STATUS_INVALID_DEVICE_REQUEST\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 A StallRequestsAndNotify is already pending for this queue\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdq}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of queue object\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i notify}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of notification function\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i context}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Context value to be used as the only argument to the notify function\par 
+
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 StartDevice\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b NTSTATUS} {\b StartDevice(}{\b PDEVICE_OBJECT} {\i DeviceObject}{\b , PCM_PARTIAL_RESOURCE_LIST} {\i raw}{\b , PCM_PARTIAL_RESOURCE_LIST} {\i translated}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Configure device during IRP_MN_START_DEVICE.\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/GENERIC.H\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Return Value\par \pard\plain \sa160\sl240 \fs21\lang1033 Standard status code\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i DeviceObject}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of the device object.\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i raw}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 "Raw" (i.e., untranslated) resources assigned by the PnP Manager.\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i translated}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Translated resources assigned by the PnP Manager.\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 The name of this function is a placeholder for a function you define in your driver. You 
+initialize the StartDevice field in the GENERIC_INIT_STRUCT to point to your function 
+before you call InitializeGenericExtension..\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 StartIo\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b VOID} {\b StartIo(}{\b PDEVICE_OBJECT} {\i DeviceObject}{\b , PIRP} {\i Irp}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Start the next I/O operation\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/GENERIC.H\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i DeviceObject}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of the device object\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i Irp}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 An IRP to be started\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 GENERIC passes IRPs one at a time to this routine when you call StartPacket or 
+StartNextPacket. Your function looks like a regular StartIo function in the "Standard Model" 
+for IRP processing, except that it contains no logic for dealing with a cancelled IRP.\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 The name of this function is a placeholder for a function you define in your driver. You 
+initialize the StartIo field in the GENERIC_INIT_STRUCT to point to your function 
+before you call InitializeGenericExtension.\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 StartNextPacket\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI PIRP GENERIC_EXPORT} {\b StartNextPacket(}{\b PDEVQUEUE} {\i pdq}{\b , PDEVICE_OBJECT} {\i fdo}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Start the next queued request\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/DEVQUEUE.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Return Value\par \pard\plain \sa160\sl240 \fs21\lang1033 Address of IRP with which device was previously busy (if any)\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdq}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of queue object\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i fdo}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of associated device object\par 
+
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 StartPacket\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI VOID GENERIC_EXPORT} {\b StartPacket(}{\b PDEVQUEUE} {\i pdq}{\b , PDEVICE_OBJECT} {\i fdo}{\b , PIRP} {\i Irp}{\b , PDRIVER_CANCEL} {\i cancel}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Queue or start a new request\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/DEVQUEUE.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdq}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of queue object\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i fdo}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of associated device object\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i Irp}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 IRP to start or queue\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i cancel}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Cancel routine\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 If the device is currently idle and the queue isn't stalled, this function 
+sends the new IRP to the StartIo routine. Otherwise, it puts the IRP onto the queue.\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 StopDevice\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b VOID} {\b StopDevice(}{\b PDEVICE_OBJECT} {\i DeviceObject}{\b , BOOLEAN} {\i OkTouch}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Deconfigure device during IRP_MN_STOP_DEVICE (and at other times).\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/GENERIC.H\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i DeviceObject}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of the device object.\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i OkTouch}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 TRUE if it will be okay to communicate with the hardware, FALSE otherwise.\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 In general, the operations of StopDevice should be the opposite of the operations performed in StartDevice.\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 The name of this function is a placeholder for a function you define in your driver. You 
+initialize the StopDevice field in the GENERIC_INIT_STRUCT to point to your function 
+before you call InitializeGenericExtension..\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 \cf6 Developer Notes\par \pard\plain \sa160\sl240 \fs21\lang1033 \cf6 StopDevice can be called multiple times for a single call to StartDevice.\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 WaitForCurrentIrp\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI VOID GENERIC_EXPORT} {\b WaitForCurrentIrp(}{\b PDEVQUEUE} {\i pdq}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Wait for the current IRP to finish\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/DEVQUEUE.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i pdq}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of queue object\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 If the device is currently busy, this function waits for the IRP to complete\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 WaitForCurrentIrps\par 
+\pard \plain \sa160\sl240 \fs21\lang1033 {\b GENERICAPI VOID GENERIC_EXPORT} {\b WaitForCurrentIrps(}{\b PDEVQUEUE*} {\i q}{\b , ULONG} {\i nq}{\b ) }\par
+\pard\plain \sa160\sl240 \fs21\lang1033 Wait for the current IRP(s) to finish\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/DEVQUEUE.CPP\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Parameters\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i q}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Array of queue objects\par 
+
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\i nq}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Number of queues\par 
+
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 If the device is currently busy, this function waits for the IRP to complete\par 
+\pard\plain \s57\li-1770\ri30\sb280\sa250\sl-120\keepn\brdrb\brdrs\brdrw15\brdrcf2 \fs8\cf8\lang1033 \par 
+\pard\plain \s254\li-1800\sb200\sa80\sl-440\keepn \b\f0\fs40\lang1033 GENERIC_INIT_STRUCT Structure\par 
+\pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 typedef struct \{\par \pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 \tab ULONG Size;\par \pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 \tab PDEVICE_OBJECT DeviceObject;\par \pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 \tab PDEVICE_OBJECT Pdo;\par \pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 \tab PDEVICE_OBJECT Ldo;\par \pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 \tab PGENERIC_REMOVE_LOCK RemoveLock;\par \pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 \tab PDEVQUEUE DeviceQueue;\par \pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 \tab PDRIVER_STARTIO StartIo;\par \pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 \tab PSTART_DEVICE StartDevice;\par \pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 \tab PSTOP_DEVICE StopDevice;\par \pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 \tab PREMOVE_DEVICE RemoveDevice;\par \pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 \tab UNICODE_STRING DebugName;\par \pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 \tab ULONG Flags;\par \pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 \tab PQUERYFUNCTION OkayToStop;\par \pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 \tab PQUERYFUNCTION OkayToRemove;\par \pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 \tab PQUERYPOWERFUNCTION QueryPower;\par \pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 \tab PCONTEXTFUNCTION SaveDeviceContext;\par \pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 \tab PCONTEXTFUNCTION RestoreDeviceContext;\par \pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 \tab DEVICE_POWER_STATE PerfBoundary;\par \pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 \tab ULONG NumberOfQueues;\par \pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 \tab ULONG Reserved[8];\par \pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 \tab struct QSIO Queues[1];\par \pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 \} GENERIC_INIT_STRUCT;\par 
+\pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 \par 
+
+\pard\plain \sa160\sl240 \fs21\lang1033 Parameter structure for InitializeGenericExtension\par 
+\pard\plain \sa160\sl240 \fs21\lang1033 Defined in: D:/WDMBOOK/GENERIC/GENERIC.H\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Members\par \pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\b Size}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Size of this structure. Initialize this to sizeof(GENERIC_INIT_STRUCT).\par 
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\b DeviceObject}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 The device object being registered. This would generally be returned by IoCreateDevice.\par 
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\b Pdo}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 The PDO below this device object. This would generally be the same as the 2d argument to AddDevice.\par 
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\b Ldo}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Immediately lower device object. Set this equal to the return value from IoAttachDeviceToDeviceStack.\par 
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\b RemoveLock}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of remove lock in containing device extension (optional). InitializeGenericExtension will initialize this object for you. Specify NULL if you're not using an IO_REMOVE_LOCK.\par 
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\b DeviceQueue}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Address of queue object for read/write IRPs (optional). InitializeGenericExtension will initialize this object for you. Specify NULL if you don't queue read/write IRPs or (starting with version 1.3) if you use the Queues array instead because you have more than one queue.\par 
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\b StartIo}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Start I/O routine for reads & writes (required only if DeviceQueue non-NULL). See the entry for StartIo for an explanation of the calling sequence to this routine.\par 
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\b StartDevice}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Routine to initialize device configuration. See the entry for StartDevice for an explanation of the calling sequence to this routine.\par 
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\b StopDevice}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Routine to release device configuration. See the entry for StopDevice for an explanation of the calling sequence to this routine.\par 
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\b RemoveDevice}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Routine to remove device object. See the entry for RemoveDevice for an explanation of the calling sequence to this routine.\par 
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\b DebugName}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Name to use in debug messages.\par 
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\b Flags}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Option flags. Zero or more of the following values:\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 GENERIC_AUTOLAUNCH\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 Register and enable a device interface so that the AutoLaunch service will launch an application when this device starts.\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 GENERIC_USAGE_PAGING\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 This device supports the paging-file usage notification.\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 GENERIC_USAGE_DUMP\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 This device supports the dump-file usage notification.\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 GENERIC_USAGE_HIBERNATE\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 This device supports the hibernate-file usage notification.\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 GENERIC_PENDING_IOCTLS\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 The driver may cache asynchronous DeviceIoControl operations.\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 GENERIC_SURPRISE_REMOVAL_OK\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 Surprise removal of the device is okay.\par 
+\pard\plain \s53\li280\sl-240\keepn \f0\fs21\lang1033 GENERIC_IDLE_DETECT\par 
+\pard\plain \s55\li560\sa80\sl-240 \f0\fs21\lang1033 Device supports GENERIC's idle detection scheme.\par 
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\b OkayToStop}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Routine to decide whether it's okay to stop device now (optional). See the entry for OkayToStop for an explanation of the calling sequence to this routine. If you specify NULL, GENERIC assumes it's always okay to stop your device.\par 
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\b OkayToRemove}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Routine to decide whether it's okay to remove device now (optional). See the entry for OkayToRemove for an explanation of the calling sequence to this routine. If you specify NULL, GENERIC assumes it's always okay to remove your device.\par 
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\b QueryPower}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Routine to decide whether a proposed device power change is okay (optional). See the entry for QueryPower for an explanation of the calling sequence to this routine. If you specify NULL, GENERIC assumes that all power changes are okay unless your device is in the path of a paging, dump, or hibernation file.\par 
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\b SaveDeviceContext}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Routine to save device context before power down (optional). See the entry for SaveDeviceContext for an explanation of the calling sequence to this routine. If you specify NULL, GENERIC will power the device down without affording you a chance to save any context information.\par 
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\b RestoreDeviceContext}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Routine to restore device context after power up (optional). See the entry for RestoreDeviceContext for an explanation of the calling sequence to this routine. If you specify NULL, GENERIC will restore power to the device without affording you a chance to restore any context information.\par 
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\b PerfBoundary}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 (Optional) Power state below which context restore inordinately expensive. Leave zero if context restore not ever a performance issue with this device.\par 
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\b NumberOfQueues}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Number of device queues in DeviceQueues array (1.3)\par 
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\b Reserved[8]}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 Reserved for future use (1.3)\par 
+\pard\plain \s50\sl-240\keepn \f0\fs21\lang1033 {\b Queues[1]}\par 
+\pard\plain \s54\li280\sa80\sl-240 \f0\fs21\lang1033 (Optional) NumberOfQueues pointers to DEVQUEUE objects and their corresponding StartIo functions. If you have just one queue, fill in the DeviceQueue member of this structure instead. Otherwise, reserve sufficient storage to hold additional queue & StartIo pointers, and fill in this array. Added in version 1.3.\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Comments\par \pard\plain \sa160\sl240 \fs21\lang1033 You create an instance of this structure and pass its address as an argument when 
+you call InitializeGenericExtension\par 
+\pard\plain \s46\sb20\sl-220\keepn\pvpara\phpg\posy0\absw1560\dxfrtext240\dfrmtxtx240\dfrmtxty240 \b\f2\fs21\lang1033 Example\par \pard\plain \sa160\sl240 \fs21\lang1033 The following example illustrates how you might initialize this structure:\par 
+\pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 GENERIC_INIT_STRUCT gis;\par 
+
+gis.Size = sizeof(GENERIC_INIT_STRUCT);\par 
+
+gis.DeviceObject = fdo;\par 
+
+gis.Pdo = pdo;\par 
+
+gis.Ldo = pdx->LowerDeviceObject;\par 
+
+gis.RemoveLock = &pdx->RemoveLock;\par 
+
+gis.DeviceQueue = &pdx->dqReadWrite;\par 
+
+gis.StartIo = StartIo;\par 
+
+gis.StartDevice = StartDevice;\par 
+
+gis.StopDevice = StopDevice;\par 
+
+gis.RemoveDevice = RemoveDevice;\par 
+
+RtlInitUnicodeString(&gis, DebugName, L"MYDRIVER");\par 
+
+gis.Flags = GENERIC_SURPRISE_REMOVAL_OK | GENERIC_IDLE_DETECT;\par 
+
+gis.OkayToStop = OkayToStop;\par 
+
+gis.OkayToRemove = OkayToRemove;\par 
+\pard\plain \s28\sl-220\tx380\tx760\tx1140\tx1520\tx1900\tx2280\tx2660\tx3040\tx3420\tx3800 \f19\fs16\lang1033 \par 
+
+}
