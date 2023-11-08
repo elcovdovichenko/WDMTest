@@ -1,0 +1,45 @@
+object Form1: TForm1
+  Left = 215
+  Top = 104
+  Width = 512
+  Height = 370
+  Caption = 'Notification Event Discovery'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnClose = FormClose
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Memo: TMemo
+    Left = 24
+    Top = 16
+    Width = 385
+    Height = 313
+    TabOrder = 0
+  end
+  object bnEvent: TButton
+    Left = 424
+    Top = 16
+    Width = 75
+    Height = 25
+    Caption = 'Event'
+    TabOrder = 1
+    OnClick = bnEventClick
+  end
+  object SpinEdit1: TSpinEdit
+    Left = 424
+    Top = 56
+    Width = 73
+    Height = 22
+    MaxValue = 0
+    MinValue = 0
+    TabOrder = 2
+    Value = 1000
+    OnChange = SpinEdit1Change
+  end
+end

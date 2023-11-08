@@ -1,0 +1,30 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: evnotify - Win32 Checked--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Slava\LOCALS~1\Temp\RSP3B.bat" with contents
+[
+@echo off
+C:\WDMBOOK\nmsym -translate:source,package,always .\objchk\i386\evnotify.sys
+copy .\objchk\i386\evnotify.sys C:\WINNT\system32\drivers
+]
+Creating command line "C:\DOCUME~1\Slava\LOCALS~1\Temp\RSP3B.bat"
+<h3>Output Window</h3>
+Finishing up...
+When you installed the WDM Book samples, you indicated that
+Soft-Ice/W was not present on your computer. No symbol file
+has been generated. If you want to generate symbol files
+in the future, change the SIWPATH environment variable to
+point to the Soft-Ice/W base directory.
+
+
+
+<h3>Results</h3>
+evnotify.sys - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

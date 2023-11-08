@@ -1,0 +1,78 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: notify - Win32 Checked--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"objchk\i386/driver.res" /d "_DEBUG" "D:\Projects\Wdm\Notify\sys\driver.rc"" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPA341.TMP" with contents
+[
+/nologo /Gz /MLd /W3 /Z7 /Oi /Gy /I "C:\WINDDK\2195\inc" /FI"C:\WINDDK\2195\inc\warning.h" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D _X86_=1 /D i386=1 /D "STD_CALL" /D CONDITION_HANDLING=1 /D NT_UP=1 /D NT_INST=0 /D WIN32=100 /D _NT1X_=100 /D WINNT=1 /D _WIN32_WINNT=0x0500 /D _WIN32_IE=0x0400 /D WIN32_LEAN_AND_MEAN=1 /D DBG=1 /D DEVL=1 /D FPO=0 /D "NDEBUG" /D _DLL=1 /D "DRIVER" /D "_IDWBUILD" /D "RDRDBG" /D "SRVDBG" /FR"objchk\i386/" /Fp"objchk\i386/notify.pch" /Yu"stddcls.h" /Fo"objchk\i386/" /Fd"objchk\i386/" /FD /GZ /Zel -cbstring /QIfdiv- /QI0f /GF /QIf /c 
+"D:\Projects\Wdm\Notify\sys\Control.cpp"
+"D:\Projects\Wdm\Notify\sys\DriverEntry.cpp"
+"D:\Projects\Wdm\Notify\sys\PlugPlay.cpp"
+"D:\Projects\Wdm\Notify\sys\Power.cpp"
+"D:\Projects\Wdm\Notify\sys\ReadWrite.cpp"
+"D:\Projects\Wdm\Notify\sys\RemoveLock.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPA341.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPA342.TMP" with contents
+[
+/nologo /Gz /MLd /W3 /Z7 /Oi /Gy /I "C:\WINDDK\2195\inc" /FI"C:\WINDDK\2195\inc\warning.h" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D _X86_=1 /D i386=1 /D "STD_CALL" /D CONDITION_HANDLING=1 /D NT_UP=1 /D NT_INST=0 /D WIN32=100 /D _NT1X_=100 /D WINNT=1 /D _WIN32_WINNT=0x0500 /D _WIN32_IE=0x0400 /D WIN32_LEAN_AND_MEAN=1 /D DBG=1 /D DEVL=1 /D FPO=0 /D "NDEBUG" /D _DLL=1 /D "DRIVER" /D "_IDWBUILD" /D "RDRDBG" /D "SRVDBG" /FR"objchk\i386/" /Fp"objchk\i386/notify.pch" /Yc"stddcls.h" /Fo"objchk\i386/" /Fd"objchk\i386/" /FD /GZ /Zel -cbstring /QIfdiv- /QI0f /GF /QIf /c 
+"D:\Projects\Wdm\Notify\sys\stddcls.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPA342.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPA343.TMP" with contents
+[
+wdm.lib /nologo /base:"0x10000" /version:4.0 /entry:"DriverEntry@8" /subsystem:windows /pdb:none /debug /debugtype:both /machine:I386 /nodefaultlib /out:"objchk\i386\notify.sys" /libpath:"C:\WINDDK\2195\libchk\i386" -MERGE:_PAGE=PAGE -MERGE:_TEXT=.text -MERGE:.rdata=.text -SECTION:INIT,d -OPT:REF -FORCE:MULTIPLE -RELEASE -FULLBUILD -IGNORE:4001,4037,4039,4065,4070,4078,4087,4089,4096 -osversion:4.00 -optidata -driver -align:0x20 -subsystem:native,4.00 -debug:notmapped,FULL 
+.\objchk\i386\Control.obj
+.\objchk\i386\DriverEntry.obj
+.\objchk\i386\PlugPlay.obj
+.\objchk\i386\Power.obj
+.\objchk\i386\ReadWrite.obj
+.\objchk\i386\RemoveLock.obj
+.\objchk\i386\stddcls.obj
+.\objchk\i386\driver.res
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPA343.TMP"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+stddcls.cpp
+Compiling...
+Control.cpp
+DriverEntry.cpp
+PlugPlay.cpp
+Power.cpp
+ReadWrite.cpp
+RemoveLock.cpp
+Generating Code...
+Linking...
+Creating command line "bscmake.exe /nologo /o"objchk\i386/notify.bsc"  .\objchk\i386\stddcls.sbr .\objchk\i386\Control.sbr .\objchk\i386\DriverEntry.sbr .\objchk\i386\PlugPlay.sbr .\objchk\i386\Power.sbr .\objchk\i386\ReadWrite.sbr .\objchk\i386\RemoveLock.sbr"
+Creating browse info file...
+<h3>Output Window</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSPB021.BAT" with contents
+[
+@echo off
+copy .\objchk\i386\notify.sys C:\WINDOWS\system32\drivers
+C:\WDMBOOK\nmsym -translate:source,package,always .\objchk\i386\notify.sys
+]
+Creating command line "C:\WINDOWS\TEMP\RSPB021.BAT"
+
+        1 file(s) copied
+When you installed the WDM Book samples, you indicated that
+Soft-Ice/W was not present on your computer. No symbol file
+has been generated. If you want to generate symbol files
+in the future, change the SIWPATH environment variable to
+point to the Soft-Ice/W base directory.
+
+
+
+
+<h3>Results</h3>
+notify.sys - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

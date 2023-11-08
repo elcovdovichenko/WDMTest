@@ -1,0 +1,109 @@
+unit devclass;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, ExtCtrls, Classes, Forms, EvThread;
+
+const
+  { evnotify interface GUID }
+  EventsIID: TGUID = '{04B40308-3F0C-4EF3-BAF0-DCD8BD06DA53}';
+
+type
+  TEventNotify = procedure (Data: integer) of object;
+
+  TEventDevice = class
+  private
+    FHandle: THandle;
+    FHDevice: THandle;
+    FDevName: string;
+    FManualCount: integer;
+    FTimerCount: integer;
+    ManualThread: TEventThread;
+    TimerThread: TEventThread;
+    FOnManual: TEventNotify;
+    FOnTimer: TEventNotify;
+  protected
+    procedure WndProc(var Msg: TMessage);
+  public
+    constructor Create(DeviceName: string);
+    destructor Destroy; override;
+    function Manual: integer;
+    function Timing: integer;
+    property HDevice: THandle read FHDevice;
+    property DevName: string read FDevName;
+    property OnManual: TEventNotify read FOnManual write FOnManual;
+    property OnTimer: TEventNotify read FOnTimer write FOnTimer;
+  end;
+
+implementation
+
+const
+  { IOCTLs }
+  IOCTL_MANUAL_ACTIVITY = $222000;
+  IOCTL_TIMER_ACTIVITY = $222004;
+  IOCTL_MANUAL_EVENT = $222008;
+  IOCTL_TIMER_EVENT = $22200C;
+  {wm_Xxx}
+  wm_Manual = wm_User+1;
+  wm_Timer = wm_User+2;
+  
+{  TEventDevice  }
+
+constructor TEventDevice.Create(DeviceName: string);
+begin
+  inherited Create;
+
+  FManualCount:=0;
+  FTimerCount:=0;
+  FDevName:=DeviceName;
+  FHDevice:=CreateFile(PChar(FDevName), 0, 0, NIL, OPEN_EXISTING, 0, 0);
+  FHandle:=AllocateHWnd(WndProc);
+
+  if FHDevice = INVALID_HANDLE_VALUE
+  then OutputDebugString(PChar('Error on open the device in process: '+IntToStr(GetLastError)+#13#10))
+  else begin
+       OutputDebugString(PChar('Device '+ FDevName +' in process is opened'#13#10));
+       ManualThread:= TEventThread.Create(FDevName,IOCTL_MANUAL_EVENT,4,FHandle,wm_Manual);
+       TimerThread:= TEventThread.Create(FDevName,IOCTL_TIMER_EVENT,4,FHandle,wm_Timer);
+       end;
+end;
+
+destructor TEventDevice.Destroy;
+begin
+  CloseHandle(FHDevice);
+
+  OutputDebugString('Device in process is closed'#13#10);
+  inherited Destroy;
+end;
+
+function TEventDevice.Manual: integer;
+var count: DWord;
+begin
+  inc(FManualCount);
+  if DeviceIOControl(FHDevice, IOCTL_MANUAL_ACTIVITY, @FManualCount, 4, NIL, 0, count, NIL)
+  then Result:=0
+  else Result:=-1;
+end;
+
+function TEventDevice.Timing: integer;
+var count: DWord;
+begin
+  inc(FTimerCount);
+  if DeviceIOControl(FHDevice, IOCTL_TIMER_ACTIVITY, @FTimerCount, 4, NIL, 0, count, NIL)
+  then Result:=0
+  else Result:=-1;
+end;
+
+procedure TEventDevice.WndProc(var Msg: TMessage);
+begin
+  case Msg.Msg of
+    wm_Manual:
+      if Assigned(FOnManual) then FOnManual(integer(pointer(Msg.WParam)^));
+    wm_Timer:
+      if Assigned(FOnTimer) then FOnTimer(integer(pointer(Msg.WParam)^));
+    end;
+end;
+
+end.
+
