@@ -1,0 +1,10 @@
+# The sources for the Second function device driver:
+
+TARGETNAME=fdsecond
+TARGETPATH=obj
+TARGETTYPE=DRIVER
+DRIVERTYPE=WDM
+
+SOURCES=fdsecond.c
+
+

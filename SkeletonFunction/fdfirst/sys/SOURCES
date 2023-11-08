@@ -1,0 +1,10 @@
+# The sources for the First function device driver:
+
+TARGETNAME=fdfirst
+TARGETPATH=obj
+TARGETTYPE=DRIVER
+DRIVERTYPE=WDM
+
+SOURCES=fdfirst.c
+
+

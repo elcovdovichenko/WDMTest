@@ -1,0 +1,95 @@
+; Copyright (c) 2001 Elco CT All Rights Reserved
+;
+;Module Name:
+;
+;    FDFIRST.INF
+;
+;Abstract:
+;    Installation file (.inf) for the Skeleton Function Driver device.
+;
+
+[Version]
+Signature="$CHICAGO$"
+Class=Skeleton
+ClassGuid={32B04CA9-6DE2-47af-9FEE-206D1F2BF629}
+Provider=%ELCO%
+DriverVer=01/12/2001, 0.00.0000.1
+
+[DestinationDirs]
+Function.Files.Ext = 12
+Function.Files.Inf = 17
+
+; ================= Class section =====================
+
+[ClassInstall32]
+Addreg=SkeletonClassReg
+
+[SkeletonClassReg]
+HKR,,,0,%ClassName%
+HKR,,Icon,,-5
+
+;*****************************************
+; Function Device  Install Section
+;*****************************************
+
+[Manufacturer]
+%ELCO%=ELCO.Mfg
+
+[ELCO.Mfg]
+; DisplayName       	Section          DeviceId
+; -----------           -------          --------
+%Function.DeviceDesc% = Function.Device, Skeleton\fdfirst
+
+
+;
+; General installation section
+;
+
+[Function.Device.NT]
+CopyFiles=Function.Files.Ext, Function.Files.Inf
+;AddReg=Function.AddReg
+
+[Function.Files.Ext]
+fdfirst.sys
+
+[Function.Files.Inf]
+fdfirst.inf
+
+;
+; Service Installation
+;
+
+[Function.Device.NT.Services]
+AddService = fdfirst, 0x00000002, Function.AddService
+
+[Function.AddService]
+DisplayName    = %Function.DeviceDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 0                  ; SERVICE_ERROR_IGNORE
+ServiceBinary  = %12%\fdfirst.sys
+LoadOrderGroup = Extended Base
+
+;[Function.AddReg]
+;HKR,,DevLoader,,*ntkern
+;HKR,,NTMPDriver,,fdfirst.sys
+
+;
+; Source file information
+;
+
+[SourceDisksNames]
+1 = %DiskId1%,,0
+
+[SourceDisksFiles]
+fdfirst.sys = 1
+fdfirst.inf = 1
+
+;---------------------------------------------------------------;
+
+[Strings]
+ELCO = "Elco CT"
+Function.DeviceDesc = "Function Driver First"
+DiskId1 = "Skeleton Function Driver Installation Disk #1"
+ClassName = "Skeleton"
+
